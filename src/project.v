@@ -395,6 +395,9 @@ module tt_um_tetris_example(
     reg [3:0] p_row3;
 
     always @* begin
+        board_index = 0; 
+        collision_rotate = 0;
+        render_index = 0;
 
         p_row0 = piece_row(piece, rotation, 2'd0);
         p_row1 = piece_row(piece, rotation, 2'd1);
@@ -419,6 +422,9 @@ module tt_um_tetris_example(
     reg [3:0] collision_row;
 
     always @* begin
+        board_index = 0; 
+        collision_rotate = 0;
+        render_index = 0;
 
         collision_down  = 1'b0;
         collision_left  = 1'b0;
@@ -916,6 +922,9 @@ module tt_um_tetris_example(
     integer render_y;
 
     always @* begin
+        board_index = 0; 
+        collision_rotate = 0;
+        render_index = 0;
 
         falling_cell = 1'b0;
 
@@ -967,6 +976,9 @@ module tt_um_tetris_example(
     integer render_index;
 
     always @* begin
+        board_index = 0; 
+        collision_rotate = 0;
+        render_index = 0;
 
         board_cell = 1'b0;
 
@@ -1004,6 +1016,9 @@ module tt_um_tetris_example(
     reg [1:0] color_b;
 
     always @* begin
+        board_index = 0; 
+        collision_rotate = 0;
+        render_index = 0;
 
         color_r = 2'b00;
         color_g = 2'b00;
